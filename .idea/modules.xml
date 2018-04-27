@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/intellij-maven-ajax-quickstart.iml" filepath="$PROJECT_DIR$/intellij-maven-ajax-quickstart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AJAXPoets.iml" filepath="$PROJECT_DIR$/AJAXPoets.iml" />
     </modules>
   </component>
 </project>
