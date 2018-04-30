@@ -4,7 +4,7 @@ import com.codecool.web.model.Poet;
 
 import java.sql.SQLException;
 
-public interface UserDao {
+public interface PoetDao {
 
     Poet findByEmail(String email) throws SQLException;
 }
