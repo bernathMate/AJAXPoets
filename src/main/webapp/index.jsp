@@ -34,7 +34,7 @@
             <p><span id="poet-name"></span></p>
         </div>
         <div id="poems-content" class="hidden content">
-            <h3>Poems:</h3>
+            <h3>Your poems:</h3>
             <table id="poems">
                 <thead>
                 <tr>
@@ -46,6 +46,10 @@
                 <tbody>
                 </tbody>
             </table>
+        </div>
+        <div id="poem-content" class="hidden content">
+            <h3>Poem's content:</h3>
+            <p><span id="content"></span></p>
         </div>
         <div id="logout-content" class="hidden content">
             <button id="logout-button">Logout</button>
