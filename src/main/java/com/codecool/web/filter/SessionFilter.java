@@ -1,5 +1,7 @@
 package com.codecool.web.filter;
 
+import com.codecool.web.model.Poet;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +21,7 @@ public final class SessionFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
         HttpSession session = req.getSession();
-        User user = (User) session.getAttribute("user");
+        Poet user = (Poet) session.getAttribute("poet");
         if (user == null) {
             resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         } else {
