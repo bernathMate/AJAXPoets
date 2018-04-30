@@ -20,15 +20,14 @@ CREATE TABLE works (
     FOREIGN KEY (poet_id) REFERENCES poets(id)
 );
 
-INSERT INTO poets(id, name, email, password) VALUES
-    (1, 'Závada Péter', 'zavada.peter@poets.hu', 'peter'),
-    (2, 'Babits Mihály', 'babits.mihaly@poets.hu', 'mihaly'),
-    (3, 'Kosztolányi Dezső', 'kosztolanyi.dezso@poets.hu', 'dezso'),
-    (4, 'Csáth Géza', 'csath.geza@poets.hu', 'geza');
+INSERT INTO poets(name, email, password) VALUES
+    ('Závada Péter', 'zavada.peter@poets.hu', 'peter'),
+    ('Babits Mihály', 'babits.mihaly@poets.hu', 'mihaly'),
+    ('Kosztolányi Dezső', 'kosztolanyi.dezso@poets.hu', 'dezso'),
+    ('Csáth Géza', 'csath.geza@poets.hu', 'geza');
 
-INSERT INTO works(id, poet_id, title, content, published_date) VALUES
+INSERT INTO works(poet_id, title, content, published_date) VALUES
     (1,
-    1,
     'Remíz',
     'Nem tudom elfogadni, hogy lassan
     véget ér ez a nyár is, és aztán már
@@ -64,8 +63,7 @@ INSERT INTO works(id, poet_id, title, content, published_date) VALUES
     elaludtam a leghátsó ülésen, és senki
     nem szólt időben, hogy le kéne szállni.',
     2015),
-    (2,
-    1,
+    (1,
     'Testtáj',
     'Ezt a két partot már csak a szélcsatornák
     kötik össze, egyébként napról napra
@@ -86,8 +84,7 @@ INSERT INTO works(id, poet_id, title, content, published_date) VALUES
     kiékeled magad egy megfelelő hosszúságú
     fintorral két arckifejezés pillére közé.',
     2015),
-    (3,
-    2,
+    (2,
     'Pesti éj',
     'Én így szeretem ezt, spaléta nélkül,
     mikor keresztet vet reám az ablak
@@ -123,8 +120,7 @@ INSERT INTO works(id, poet_id, title, content, published_date) VALUES
     S a Halál se több lesz,
     mint két ing közt egy meztelen kebel.',
     1924),
-    (4,
-    2,
+    (2,
     'Dzsungel-idill',
     'Jer ki, kedves, az esőtől minden ujra friss.
     Láttad hogy kinyilt a másik georgina is?
@@ -156,8 +152,7 @@ INSERT INTO works(id, poet_id, title, content, published_date) VALUES
     amik olyan illatosak és keserüek,
     mint e nyár, melyet alattuk élni jó veled.',
     1931),
-    (5,
-    3,
+    (3,
     'Üllői-úti fák',
     'Az ég legyen tivéletek,
      Üllői-úti fák.
@@ -186,8 +181,7 @@ INSERT INTO works(id, poet_id, title, content, published_date) VALUES
     Feleljetek, bús lombu fák,
      Üllői-úti fák.',
     1907),
-    (6,
-    3,
+    (3,
     'Méz',
     'A fájdalmam oly érett, mint a méz már,
     és bölcs és mély és terhes száz titokkal,
@@ -210,15 +204,13 @@ INSERT INTO works(id, poet_id, title, content, published_date) VALUES
     s ó könny, te élet mély esszenciája,
     megölt virágok méze, fájdalom.',
     1912),
-    (7,
-    4,
+    (4,
     'Muzsikusok (részlet)',
     'A városban csak úgy beszéltek róluk: a muzsikusok. A nevüket senki sem tudta biztosan, összekeverték: Kulhanek, Manojlovics?! Nevettek rajtok, kicsit megvetették, és kicsit tisztelték őket. Ha vasárnap a nagymisén átzúgott a templomon a trombiták hangja, úgy, hogy némelyik érzékeny gimnazista összeborzongott és belesápadt, ilyenkor a nép is bizonyos elismeréssel gondolt talán egy pillanatra rájuk, a muzsikusokra, akik eljöttek messze Csehországból, hogy az Úr méltó tiszteletben részesüljön olyan városban is, ahol senki, de senki se tud kottából trombitálni. De különben!? Ők maguk is jobban szerettek erről nem gondolkozni.
 
     Idegenül érezték magukat a városban, és ha a kicsiny kőszínházban, ahol télen át az előadásoknál zenéltek, valamelyik hazafias darabban előkerült a Rákóczi-induló, mindig értelmetlenül és bizalmatlan hunyorgással néztek föl a zenekar mélyéből a közönségre. A közönség - a 90-es évekről van szó - kivétel nélkül hangos kiabálással és lármásan tapsolt. Ezt nem lehetett megérteni. Mert elvégre ők "taktmässig" eljátszották a darabot, és nagyobb hiba se történt - ha a pozaun irgalmatlanul recsegő hangjait hibának nem számítjuk -, de mivel különb ez a darab, mint a többi!? Ilyenkor viszont ők vetették meg egy kicsit a közönséget.',
     1913),
-    (8,
-    4,
+    (4,
     'Tor (részlet)',
     'A téli éjszakának vége volt... és messze, a fekete háztömegeken túl: ott, ahol a mező homályos vonalban végződik - egy szürke csík jelent meg az ég alján. Fönn még a csillagok pislogtak. És lenn a házak között, a mély, árnyéktalan sötétségben, ahol az alvó emberek lélegzése hallatszott, még semmit se tudtak arról a szürke csíkról.
 
