@@ -1,6 +1,6 @@
 package com.codecool.web.dao.database;
 
-import com.codecool.web.dao.UserDao;
+import com.codecool.web.dao.PoetDao;
 import com.codecool.web.model.Poet;
 
 import java.sql.Connection;
@@ -8,9 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DatabaseUserDao extends AbstractDao implements UserDao{
+public class DatabasePoetDao extends AbstractDao implements PoetDao {
 
-    public DatabaseUserDao(Connection connection) {
+    public DatabasePoetDao(Connection connection) {
         super(connection);
     }
 
