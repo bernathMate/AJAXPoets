@@ -3,6 +3,7 @@ package com.codecool.web.servlet;
 import com.codecool.web.dao.PoemDao;
 import com.codecool.web.dao.database.DatabasePoemDao;
 import com.codecool.web.model.Poem;
+import com.codecool.web.model.Poet;
 import com.codecool.web.service.PoemService;
 import com.codecool.web.service.exception.ServiceException;
 import com.codecool.web.service.simple.SimplePoemService;
@@ -25,8 +26,8 @@ public class PoemServlet extends AbstractServlet {
             PoemService poemService = new SimplePoemService(poemDao);
 
             String poemId = req.getParameter("id");
-            String poetId = req.getSession().getId();
-            Poem poem = poemService.getPoemByPoetIdAndPoemId(Integer.parseInt(poetId), Integer.parseInt(poemId));
+            int poetId = ((Poet) req.getSession().getAttribute("poet")).getId();
+            Poem poem = poemService.getPoemByPoetIdAndPoemId(poetId, Integer.parseInt(poemId));
 
             sendMessage(resp, HttpServletResponse.SC_OK, poem);
         } catch (ServiceException e) {
