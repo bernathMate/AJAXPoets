@@ -48,6 +48,14 @@
             </table>
         </div>
         <div id="poem-content" class="hidden content">
+            <h3>Type here your expression to search!</h3>
+            <form id="occurence-form" onsubmit="return false;">
+                Search in the text:<input type="text" name="substring">
+                <button onclick="onSearchClicked()">Search</button><br>
+            </form>
+            Occurence counter: <span id="occurence-number"></span>
+            <div id="error">
+            </div>
             <h3>Poem's content:</h3>
             <p><span id="content"></span></p>
         </div>
