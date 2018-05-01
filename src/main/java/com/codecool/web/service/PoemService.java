@@ -11,4 +11,6 @@ public interface PoemService {
     List<Poem> getPoemsByPoetId(int poetId) throws SQLException, ServiceException;
 
     Poem getPoemByPoetIdAndPoemId(int poetId, int poemId) throws SQLException, ServiceException;
+
+    int getSubstringOccurenceByPoetIdAndPoemId(int poetId, int poemId, String substring) throws SQLException, ServiceException;
 }
