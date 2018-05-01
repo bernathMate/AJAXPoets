@@ -10,4 +10,6 @@ public interface PoemDao {
     List<Poem> findAllByPoetId(int poetId) throws SQLException;
 
     Poem findByPoetIdAndPoemId(int poetId, int poemId) throws SQLException;
+
+    String findContentByPoetIdAndPoemId(int poetId, int poemId) throws SQLException;
 }
