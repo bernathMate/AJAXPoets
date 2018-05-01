@@ -46,6 +46,21 @@ public class DatabasePoemDao extends AbstractDao implements PoemDao{
         return null;
     }
 
+    @Override
+    public String findContentByPoetIdAndPoemId(int poetId, int poemId) throws SQLException {
+        String sql = "SELECT content FROM works WHERE id = ? AND poet_id = ?;";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setInt(1, poemId);
+            statement.setInt(2, poetId);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return resultSet.getString("content");
+                }
+            }
+        }
+        return null;
+    }
+
     private Poem fetchPoem(ResultSet resultSet) throws SQLException {
         int id = resultSet.getInt("id");
         String title = resultSet.getString("title");
